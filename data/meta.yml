@@ -1,0 +1,65 @@
+indicator:
+  name: Permafrost
+  slug: permafrost
+  publisher: U.S. Environmental Protection Agency
+  source_page: https://19january2025snapshot.epa.gov/climate-indicators/climate-change-indicators-permafrost/index.html
+  technical_documentation: https://19january2025snapshot.epa.gov/system/files/documents/2024-12/permafrost_td.pdf
+  rights: Public domain, work of the U.S. Government (17 U.S.C. 105)
+datasets:
+- file: permafrost_temperatures.csv
+  figure: Figure 1
+  figure_title: Figure 1. Permafrost Temperatures in Alaska, 1978–2023
+  source_file: permafrost_fig-1.csv
+  source_sha256: ed412aaf2f3d6cca20eb27b634a94830fb6fa0bf77002f64a73de58448a07e2a
+  source_encoding: UTF-8-BOM
+  data_source: University of Alaska Fairbanks, 2024
+  web_update: December 2024
+  unit: °F
+  rows: 490
+  columns:
+  - name: year
+    type: integer
+    description: Year.
+  - name: site
+    type: string
+    description: Borehole site name, as EPA prints it in this figure.
+  - name: value
+    type: number
+    description: Annual mean permafrost temperature at the site, in °F, as published
+      by EPA.
+- file: permafrost_temperature_trends.csv
+  figure: Figure 2
+  figure_title: Figure 2. Changes in Permafrost Temperatures in Alaska, 1978–2023
+  source_file: permafrost_fig-2.csv
+  source_sha256: d7a490d5a29b263ffc33a33447b214cd74ef42c7a63a1f94663e97be71b1165b
+  source_encoding: windows-1252
+  data_source: University of Alaska Fairbanks, 2024
+  web_update: December 2024
+  unit: °F per decade
+  rows: 15
+  columns:
+  - name: region
+    type: string
+    description: 'Region of Alaska: Northern Alaska or Interior Alaska.'
+  - name: site
+    type: string
+    description: Borehole site name, as EPA prints it in this figure.
+  - name: native_name
+    type: string
+    description: Alaska Native name of the site, blank where EPA gives none.
+  - name: depth_m
+    type: number
+    description: Depth of the temperature measurement, in meters.
+  - name: latitude
+    type: number
+    description: Latitude of the site in decimal degrees (north positive).
+  - name: longitude
+    type: number
+    description: Longitude of the site in decimal degrees (west negative).
+  - name: elevation_m
+    type: number
+    description: Elevation of the site, in meters.
+  - name: value
+    type: number
+    description: Decadal slope of permafrost temperature at the site, in °F per decade,
+      as published by EPA.
